@@ -1,0 +1,76 @@
+a.button, button.button {
+  border: .15vw solid $dark;
+  transition: $tr-a-3;
+  border-radius: 2.5px;
+
+  &.plain {
+    background: $dark;
+    color: $white;
+
+    &.blue {
+      background: $blue;
+      border-color: $blue;
+      color: $white;
+
+      &:hover {
+        color: $blue;
+        background: transparent;
+      }
+    }
+
+    &.white {
+      color: $white;
+      background: $dark;
+      border-color: $white;
+
+      &:hover {
+        color: $white;
+      }
+    }
+
+    &:hover {
+      background: $invert-dark-blue;
+      color: $dark;
+    }
+  }
+
+  &.border {
+    color: $dark;
+    background: transparent;
+
+    &.blue {
+      color: $blue;
+      border-color: $blue;
+
+      &:hover {
+        background: $blue;
+      }
+    }
+
+    &.white {
+      border-color: $white;
+      background: transparent;
+      color: $white;
+
+      &:hover {
+        background: $white;
+        color: $dark;
+      }
+    }
+
+    &:hover {
+      background: $dark;
+      color: $white;
+    }
+  }
+
+  &:hover {
+    text-decoration: underline!important;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  a.button, button.button {
+    border: 2px solid $dark;
+  }
+}

@@ -1,0 +1,171 @@
+main.work {
+  width: 100%;
+  min-height: calc(100vh - 100px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10vh;
+
+  & > h2 {
+    font-size: 2vw;
+    text-align: center;
+  }
+
+  section {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    padding: 5vh 10vw;
+
+    &:last-child {
+      border: none;
+    }
+
+    &:nth-child(3), &:nth-child(5) {
+      background: $dark;
+
+      h3, p, a {
+        color: $white;
+      }
+
+      figure {
+        grid-column: 1;
+        grid-row: 1;
+      }
+
+      article {
+        grid-column: 2;
+        grid-row: 1;
+
+        a {
+          justify-content: flex-end;
+        }
+      }
+    }
+
+    figure {
+      width: 100%;
+
+      img {
+        width: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border: 2px solid $dark;
+        border-radius: 10px;
+      }
+    }
+
+    article {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5vw;
+      padding: 5vh;
+
+      h3 {
+        font-size: 2vw;
+        display: flex;
+        flex-direction: column;
+        gap: .2em;
+        position: relative;
+
+        &::after {
+          content: "";
+          width: 15%;
+          height: 3px;
+          background: $orange-red;
+        }
+      }
+
+      p {
+        font-size: 1vw;
+        line-height: 1.5em;
+        letter-spacing: 1px;
+      }
+
+      ul li {
+        font-size: 1.2vw;
+      }
+
+      a {
+        color: $dark;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: .5em;
+        font-size: 1.1vw;
+        width: fit-content;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    &.more-wrapper {
+      width: 90%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 5vh;
+      padding: 10vh 0;
+      border-top: .15vw solid hsla(0, 0%, 0%, .05);
+
+      h2 {
+        font-size: 2vw;
+      }
+
+      & > a {
+        font-size: 1.2vw;
+        padding: 1em 1.5em;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  main.work {
+
+    & > h2 {
+      font-size: 2rem;
+    }
+
+    section {
+      display: flex;
+      flex-direction: column;
+
+      article {
+        gap: 1.5rem;
+
+        h3 {
+          font-size: 2rem;
+        }
+
+        p {
+          font-size: .9rem;
+        }
+
+        ul li {
+          font-size: 1.2rem;
+        }
+
+        a {
+          font-size: 1.1rem;
+        }
+      }
+
+      &.more-wrapper {
+
+        h2 {
+          font-size: 2rem;
+        }
+
+        & > a {
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+}

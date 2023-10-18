@@ -1,0 +1,12 @@
+body {
+  width: 100vw;
+  min-height: 100vh;
+
+  &.active {
+    overflow-y: hidden;
+  }
+}
+
+main {
+  margin-top: 7vw;
+}
